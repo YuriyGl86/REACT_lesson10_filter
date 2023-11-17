@@ -1,4 +1,4 @@
-import { ADD_TASK, DELETE_ITEM, EDIT_CANCEL, EDIT_ITEM, SET_FORM_TILE, SET_FORM_VALUE } from "./actions";
+import { ADD_TASK, DELETE_ITEM, EDIT_CANCEL, EDIT_ITEM, SET_FILTER, SET_FORM_TILE, SET_FORM_VALUE } from "./actions";
 
 // const initialState = {
 //   value: 0,
@@ -10,6 +10,7 @@ const initialState = {
   form: {title:'', value: ''},
   list: [{title:'ЗАмена стекла', value: '21000', id:null}],
   edit: false,
+  filter: '',
 };
 
 
@@ -26,6 +27,15 @@ const numberReducer = (state = initialState, action) => {
         ...state,
         form: {...state.form, value: action.payload}
       }
+
+
+    case SET_FILTER:
+      return {
+        ...state,
+        filter: action.payload
+      }
+
+
     case ADD_TASK:
       let newList
       if(state.edit){

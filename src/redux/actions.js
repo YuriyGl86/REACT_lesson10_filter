@@ -6,6 +6,7 @@ export const ADD_TASK = 'ADD_TASK'
 export const EDIT_ITEM = 'EDIT_ITEM'
 export const EDIT_CANCEL = 'EDIT_CANCEL'
 export const DELETE_ITEM = 'DELETE_ITEM'
+export const SET_FILTER = 'SET_FILTER'
 
 export default {
   CHANGE_NUMBER,
@@ -15,5 +16,6 @@ export default {
   ADD_TASK,
   EDIT_ITEM,
   EDIT_CANCEL,
-  DELETE_ITEM
+  DELETE_ITEM,
+  SET_FILTER
 };
